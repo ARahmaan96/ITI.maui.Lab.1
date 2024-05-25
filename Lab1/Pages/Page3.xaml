@@ -1,0 +1,140 @@
+<ContentPage
+    x:Class="Lab1.Pages.Page3"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Page3"
+    BackgroundColor="#333">
+
+    <ContentPage.Resources>
+        <!--  Style for the top buttons with border radii  -->
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="CornerRadius" Value="60" />
+            <Setter Property="Margin" Value="0,0,10,0" />
+            <Setter Property="FontSize" Value="50" />
+            <Setter Property="WidthRequest" Value="100" />
+            <Setter Property="HeightRequest" Value="100" />
+            <Setter Property="BackgroundColor" Value="#fff" />
+            <Setter Property="TextColor" Value="#333" />
+        </Style>
+    </ContentPage.Resources>
+
+    <FlexLayout Direction="Column">
+
+        <!--  Screen  -->
+        <Label
+            Margin="0,10"
+            FontAttributes="Bold"
+            FontSize="45"
+            HorizontalOptions="Center"
+            Text="{Binding Screen}"
+            TextColor="#fff" />
+
+        <!--  Definitions  -->
+        <Grid
+            Padding="20"
+            ColumnSpacing="15"
+            HeightRequest="350"
+            RowSpacing="15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.3*" />
+                <RowDefinition Height="0.3*" />
+                <RowDefinition Height="0.3*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3*" />
+                <ColumnDefinition Width="0.3*" />
+                <ColumnDefinition Width="0.3*" />
+            </Grid.ColumnDefinitions>
+
+            <!--  Numbers Buttons  -->
+            <Button
+                Grid.Row="0"
+                Grid.Column="0"
+                Clicked="AddNumber"
+                Style="{StaticResource ButtonStyle}"
+                Text="1" />
+            <Button
+                Grid.Row="0"
+                Grid.Column="1"
+                Clicked="AddNumber"
+                Style="{StaticResource ButtonStyle}"
+                Text="2" />
+            <Button
+                Grid.Row="0"
+                Grid.Column="2"
+                Clicked="AddNumber"
+                Style="{StaticResource ButtonStyle}"
+                Text="3" />
+
+            <Button
+                Grid.Row="1"
+                Grid.Column="0"
+                Clicked="AddNumber"
+                Style="{StaticResource ButtonStyle}"
+                Text="4" />
+            <Button
+                Grid.Row="1"
+                Grid.Column="1"
+                Clicked="AddNumber"
+                Style="{StaticResource ButtonStyle}"
+                Text="5" />
+            <Button
+                Grid.Row="1"
+                Grid.Column="2"
+                Clicked="AddNumber"
+                Style="{StaticResource ButtonStyle}"
+                Text="6" />
+
+            <Button
+                Grid.Row="2"
+                Grid.Column="0"
+                Clicked="AddNumber"
+                Style="{StaticResource ButtonStyle}"
+                Text="7" />
+            <Button
+                Grid.Row="2"
+                Grid.Column="1"
+                Clicked="AddNumber"
+                Style="{StaticResource ButtonStyle}"
+                Text="8" />
+            <Button
+                Grid.Row="2"
+                Grid.Column="2"
+                Clicked="AddNumber"
+                Style="{StaticResource ButtonStyle}"
+                Text="9" />
+
+            <Button
+                Grid.Row="3"
+                Grid.Column="1"
+                Clicked="AddNumber"
+                Style="{StaticResource ButtonStyle}"
+                Text="0" />
+        </Grid>
+
+        <!--  "Dial Up"  -->
+        <FlexLayout
+            Margin="20"
+            AlignItems="Center"
+            JustifyContent="Center">
+            <Button
+                Margin="7"
+                Clicked="DialUp"
+                FontSize="25"
+                HeightRequest="70"
+                HorizontalOptions="Center"
+                Text="Dial Up"
+                WidthRequest="100" />
+            <Button
+                Margin="7"
+                Clicked="Clear"
+                FontSize="25"
+                HeightRequest="70"
+                HorizontalOptions="Center"
+                Text="Clear"
+                WidthRequest="100" />
+        </FlexLayout>
+
+    </FlexLayout>
+
+</ContentPage>
